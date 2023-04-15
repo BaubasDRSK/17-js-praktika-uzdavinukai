@@ -1,0 +1,16 @@
+{
+  "name": "17-js-praktika-uzdavinukai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sprenimai.js",
+  "scripts": {
+    "js":"nodemon ./sprenimai.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Povilas G (https://github.com/baubasdrsk)",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
