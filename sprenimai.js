@@ -3,10 +3,15 @@ console.log('------Uzdavinys1---------')
 //1.Mokinys pradėjo spręsti namų darbus, kai elektroninis laikrodis rodė h1 valandų ir min1 minučių, o baigė, kai buvo h2 valandų ir min2 minučių. Parašykite programą, pagal kurią būtų randama, kiek laiko (valandų ir minučių) mokinys sprendė uždavinius. (Laikykite, kad mokinys uždavinius sprendė mažiau kaip parą).
 
 function laikas (h1,m1, h2, m2){
-    return [Math.floor((((h2*60)+m2)-((h1*60)+m1))/60), (((h2*60)+m2)-((h1*60)+m1))%60] ;
+    const pradzia = ((h1*60)+m1);
+    const pabaiga = ((h2*60)+m2);
+    if (pabaiga > pradzia){
+    return [Math.floor((pabaiga-pradzia)/60), (pabaiga-pradzia)%60] ;
+    }
+    return [Math.floor((1440-pradzia+pabaiga)/60), (1440-pradzia+pabaiga)%60] ;
 }
-const pradziosLaikas=[9,15]; //[val, min]
-const pabaigosLaikas=[18,25]; //[val, min]
+const pradziosLaikas=[21,40]; //[val, min]
+const pabaigosLaikas=[6,30]; //[val, min]
 
 console.log (`Mokynis sprende: ${laikas(pradziosLaikas[0], pradziosLaikas[1], pabaigosLaikas[0],pabaigosLaikas[1])[0]} h, ir ${laikas(pradziosLaikas[0], pradziosLaikas[1], pabaigosLaikas[0],pabaigosLaikas[1])[1]} min.`);
 
